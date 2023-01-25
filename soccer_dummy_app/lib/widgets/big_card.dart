@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'custom_card.dart';
+
 class BigCard extends StatelessWidget {
   const BigCard({
     Key? key,
@@ -17,13 +19,7 @@ class BigCard extends StatelessWidget {
         SnackBar snackBar = SnackBar(content: Text(image));
         ScaffoldMessenger.of(context).showSnackBar(snackBar);
       },
-      child: Card(
-        child: FadeInImage.assetNetwork(
-          placeholder: placeholder,
-          image: image,
-          fit: BoxFit.cover,
-        ),
-      ),
+      child: CustomCard(placeholder: placeholder, image: image),
     );
   }
 }
